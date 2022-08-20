@@ -3,33 +3,37 @@
 R implementation of examples in chapter $4$
 
 ### Folders
-- `code` R codes files
-- `data` Starwar hypergraph dataset
-- `demo` R implementation of examples in chapter $4$
+- `code`: source code
+- `data`: Starwar hypergraph dataset
+- `demo`:  R implementation of three experiemnts in chapter $4$
 
 
 
 ### Requirements
-
-- `requirments.R` contains R packages requried in experiments. To install them,
+The project is written in R 4.1.3 with several R packages in  the file `requirments.R`. It contains a list of R packages requried. To install them, run:
 ```R
-    Rscript requirment.R
+    Rscript requirments.R
 ```
 
 
 
 ### Usages
 
+We documents experiments in jupyter notebook files in folde `/demo/`.
+To run demo, one need jupyter notebook, R kenerl and several R packages installed.
+
 ```shell
     cd demo
 ```
-To run demo, one need jupyter notebook and R kenerl installed.
 
-- Simulation study on dependence between shape parameter and cluster coefficient, in `demo/demo_cluster_coef.ipynb`
+- Experiment $1$: simulation study on dependence between shape parameter and cluster coefficient
+    - run `demo/demo_cluster_coef.ipynb`
 
-- Demo on single run of mcem, `demo/demo_mcem_general_hg.ipynb`.
+- Experiment $2$: demo on single run of mcem on uniform/general hypergraph
+    - run `demo/demo_mcem_general_hg.ipynb`
 
-- Analytics on Star War hypergraphs, `demo/demo_analysis_starwar.ipynb`.
+- Experiment $3$: analytics on Star War hypergraphs
+    - run `demo/demo_analysis_starwar.ipynb`
 
 
 
