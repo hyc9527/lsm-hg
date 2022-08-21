@@ -1,4 +1,4 @@
-# A latent space model of general hypergraph
+# A latent space model of general hypergraphs
 
 R implementation of examples in chapter $4$
 
