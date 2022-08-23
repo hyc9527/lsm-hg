@@ -4,7 +4,7 @@ from ..items import mySpiderItem
 
 class mySpider(scrapy.Spider):
     name = 'new_hope'
-    start_urls = [  # 2021
+    start_urls = [# 2021
       'https://imsdb.com/scripts/Star-Wars-A-New-Hope.html',  # Episode IV A New Hope
     ]
 

@@ -7,10 +7,10 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'my_starwar_crawler'
+BOT_NAME = 'crawler_starwar'
 
-SPIDER_MODULES = ['my_starwar_crawler']
-NEWSPIDER_MODULE = 'my_starwar_crawler'
+SPIDER_MODULES = ['crawler_starwar']
+NEWSPIDER_MODULE = 'crawler_starwar'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent

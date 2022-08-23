@@ -1,10 +1,11 @@
 #!/bin/bash
 
-# The main folder where `main.sh` sits
-data_preprocessing_folder="YOUR_LOCAL_PATH_TO_THE_PREPROCESSING_FOLDER"
+# The main folder is where `/preprocessing/` sits
+# data_preprocessing_folder="YOUR_LOCAL_PATH_TO_THE_PREPROCESSING_FOLDER"
+data_preprocessing_folder="/Users/yichen/Desktop/p1/lsm-hg/preprocessing"
 
 # The spider folder for web scraping
-spider_folder="$data_preprocessing_folder/my_starwar_crawler/my_starwar_crawler"
+spider_folder="$data_preprocessing_folder/crawler_starwar/crawler_starwar"
 
 # The spider output file
 spider_output_file="$data_preprocessing_folder/output/spider_output.csv"
@@ -19,7 +20,9 @@ scrapy crawl 'new_hope' -o $spider_output_file                   # save spider o
 echo "#### Spider output file is saved in $spider_output_file"
 
 # extract hypergraph from the movie script
-#cd $data_preprocessing_folder
-#echo "#### Extract author-paper adj matrix and authorlist from spider output. "
-#python3 $helper_extractor
-#echo '#### Done.'
+cd $data_preprocessing_folder
+echo "#### Extract author-paper adj matrix and authorlist from spider output. "
+python3 $helper_extractor
+echo '#### Hypergraph adjacency matrix is saved in $data_preprocessing_folder/output/starwar4_adjMat.csv'
+echo '#### Character list is saved in $data_preprocessing_folder/output/starwar4_charactor_lst.csv'
+echo '#### done'
