@@ -10,8 +10,8 @@ R implementation of examples in chapter $4$
 
 
 ### Requirements
-The project is written in R 4.1.3 with several R packages in  the file `requirments.R`. It contains a list of R packages requried. To install them, run:
-```R
+The project is written in R 4.1.3 with several R packages. The file `requirments.R` contains a list of R packages requried for demo. To install these packages, run:
+``` shell
     Rscript requirments.R
 ```
 
@@ -26,13 +26,13 @@ To run demo, one need jupyter notebook, R kenerl and several R packages installe
     cd demo
 ```
 
-- Experiment $1$: simulation study on dependence between shape parameter and cluster coefficient
+- Experiment 1: simulation study on dependence between shape parameter and cluster coefficient
     - run `demo/demo_cluster_coef.ipynb`
 
-- Experiment $2$: demo on single run of mcem on uniform/general hypergraph
+- Experiment 2: demo on single run of mcem on uniform/general hypergraph
     - run `demo/demo_mcem_general_hg.ipynb`
 
-- Experiment $3$: analytics on Star War hypergraphs
+- Experiment 3: analytics on Star War hypergraphs
     - run `demo/demo_analysis_starwar.ipynb`
 
 
