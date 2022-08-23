@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # The main folder is where `/preprocessing/` sits
-# data_preprocessing_folder="YOUR_LOCAL_PATH_TO_THE_PREPROCESSING_FOLDER"
-data_preprocessing_folder="/Users/yichen/Desktop/p1/lsm-hg/preprocessing"
+data_preprocessing_folder="YOUR_LOCAL_PATH_TO_THE_PREPROCESSING_FOLDER"
+# data_preprocessing_folder="/Users/yichen/Desktop/p1/lsm-hg/preprocessing"
 
 # The spider folder for web scraping
 spider_folder="$data_preprocessing_folder/crawler_starwar/crawler_starwar"
