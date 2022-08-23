@@ -19,7 +19,7 @@ scrapy crawl 'new_hope' -o $spider_output_file                   # save spider o
 echo "#### Spider output file is saved in $spider_output_file"
 
 # extract hypergraph from the movie script
-cd $data_preprocessing_folder
-echo "#### Extract author-paper adj matrix and authorlist from spider output. "
-python3 $helper_extractor
-echo '#### Done.'
+#cd $data_preprocessing_folder
+#echo "#### Extract author-paper adj matrix and authorlist from spider output. "
+#python3 $helper_extractor
+#echo '#### Done.'

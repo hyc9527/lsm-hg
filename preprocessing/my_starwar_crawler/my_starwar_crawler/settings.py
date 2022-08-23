@@ -9,8 +9,8 @@
 
 BOT_NAME = 'my_starwar_crawler'
 
-SPIDER_MODULES = ['my_starwar_crawler.spiders']
-NEWSPIDER_MODULE = 'my_starwar_crawler.spiders'
+SPIDER_MODULES = ['my_starwar_crawler']
+NEWSPIDER_MODULE = 'my_starwar_crawler'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
