@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # The current folder where output csv files(adjacney matrix, author list, original data from spider) sit at
-data_preprocessing_folder="/Users/yichen/Desktop/p1/lsm-hg/preprocessing/aos"
-#data_preprocessing_folder="YOUR_LOCAL_PREPROCESSING_FOLDER"
+#data_preprocessing_folder="/Users/yichen/Desktop/p1/lsm-hg/preprocessing/aos"
+data_preprocessing_folder="YOUR_LOCAL_PREPROCESSING_FOLDER"
 
 # python script to extract adjacney matrix, author list from original data from spider output
 helper_extractor="extract_hyperedge_from_spider_output.py"
