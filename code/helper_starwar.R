@@ -23,14 +23,16 @@ load.dataset.starwar = function(){
     rownames(authorPaperBiadj ) = paste0("a", 1:num.author)
     # Summary on star war hypergraph
     print('###### Summary on dataset Star War IV ########')
-    print('Number of actors (nodes),  number of scenes (hyperedges):')
+    print('Number of actors (nodes),  number of scenes (hyperedges) are respectively')
     print(dim(authorPaperBiadj))
-    print('Actors are : ')
-    print(author.real.names.vec)
-    print('Histogram on num of actors per scene:')
+    print('Main actors are sorted in decreasing order of nodal degree : ')
+    deg=rowSums(authorPaperBiadj)
+    names(deg) = author.real.names.vec.demo
+    print(sort(deg,decreasing=T))
+    print(paste0('The busiest actor: ' , author.real.names.vec.demo[which(deg == max(deg))], ', who shows up in ', max(deg), ' scenes!'))
+    print('Histogram on k(num of actors per scene):')
     print(table(colSums(authorPaperBiadj))) # num of authors per paper histogram in original dataset
-    x = rowSums(authorPaperBiadj) #num of paper per person
-    print(paste0('The busiest actor: ' , author.real.names.vec.demo[which(x == max(x))], ', who shows up in ', max(x), ' scenes!'))
+
 }
 
 
