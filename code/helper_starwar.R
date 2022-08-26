@@ -162,6 +162,7 @@ run.mcem.general.hypergraph = function(which.mcem=1, isVerboseResult = TRUE, isS
         Sigma.hat = res.subproc$Sigma.lst[[len(res.subproc$Sigma.lst)]]
         feat.hat = res.subproc$last.feat.mat
     }
+    lkhd.lst = unlist(mix.likelihood)
     if (isVerboseResult)
     {
         print(paste0('true beta is ', mix.true.beta.demo))
@@ -171,7 +172,6 @@ run.mcem.general.hypergraph = function(which.mcem=1, isVerboseResult = TRUE, isS
 	    print(dim(feat.hat))
 	    print('rej rate along path is :')
 	    print(unlist(mix.rej))
-        lkhd.lst = unlist(mix.likelihood)
         print('log-likelihood along path is :')
         print(unlist(mix.likelihood))
     }
@@ -182,7 +182,7 @@ run.mcem.general.hypergraph = function(which.mcem=1, isVerboseResult = TRUE, isS
         save(mix.beta.est, file = paste0("./output/result-",mcem.chosen.demo,"-mcem-feat.hat-",mix.true.beta.demo[1] ,"-",current.time,"-",random.keys,".Rdata"))
         save(mix.beta.est, file = paste0("./output/result-",mcem.chosen.demo,"-mcem-shape-param-b",mix.true.beta.demo[1] ,"-",current.time,"-",random.keys,".Rdata"))
         save(lkhd.lst, file = paste0("./output/result-",mcem.chosen.demo,"-mcem-loglikelihd-b",mix.true.beta.demo[1] ,"-",current.time,"-",random.keys,".Rdata"))
-        save(mix.feat.est, file = paste0("./output/result-",mcem.type,"-mcem-feat-b",mix.true.beta.demo[1] ,"-",current.time,".Rdata"))
+        save(mix.feat.est, file = paste0("./output/result-",mcem.chosen.demo,"-mcem-feat-b",mix.true.beta.demo[1] ,"-",current.time,".Rdata"))
     }
     msg('*** MCEM for general hypergraph is finished. ')
     return(list(beta.hat=beta.hat, feat.hat=feat.hat))
