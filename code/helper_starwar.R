@@ -96,8 +96,8 @@ run.mcem.general.hypergraph = function(which.mcem=1, isVerboseResult = TRUE, isS
         print(c(mcem.chosen.demo,'is chose.'))
     }
     {# mcem iter
-        mix.num.em.iter.demo <<- c(20,3,2)                                               # --- set iteration nums for each k-sets ---#
-        mix.min.num.sweeps.estep.demo <<- c(10,10,1)  # num of sweeps in E-step
+        mix.num.em.iter.demo <<- c(20,20,10,10,10)                                       # --- set iteration nums for AOS dataset k = 2,3,...,6 ---#
+        mix.min.num.sweeps.estep.demo <<- c(10,10,10,10,10)                              #--- num of sweeps in E-step  ---#
     }
     {# E-step specs
         p.demo <<- 2
