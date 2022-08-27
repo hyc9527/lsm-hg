@@ -179,10 +179,10 @@ run.mcem.general.hypergraph = function(which.mcem=1, isVerboseResult = TRUE, isS
     {
         current.time = format(Sys.time(), "%b-%d-%H-%M-%s")
         random.keys = sample(1:1e3,1)
-        save(mix.beta.est, file = paste0("./output/result-",mcem.chosen.demo,"-mcem-feat.hat-",mix.true.beta.demo[1] ,"-",current.time,"-",random.keys,".Rdata"))
-        save(mix.beta.est, file = paste0("./output/result-",mcem.chosen.demo,"-mcem-shape-param-b",mix.true.beta.demo[1] ,"-",current.time,"-",random.keys,".Rdata"))
-        save(lkhd.lst, file = paste0("./output/result-",mcem.chosen.demo,"-mcem-loglikelihd-b",mix.true.beta.demo[1] ,"-",current.time,"-",random.keys,".Rdata"))
-        save(mix.feat.est, file = paste0("./output/result-",mcem.chosen.demo,"-mcem-feat-b",mix.true.beta.demo[1] ,"-",current.time,".Rdata"))
+        save(feat.est, file = paste0("./output/result-",mcem.chosen.demo,"-mcem-feat-hat-",current.time,"-",random.keys,".Rdata"))
+        save(mix.beta.est, file = paste0("./output/result-",mcem.chosen.demo,"-mcem-shape-param-",current.time,"-",random.keys,".Rdata"))
+        save(lkhd.lst, file = paste0("./output/result-",mcem.chosen.demo,"-mcem-loglikelihd-",current.time,"-",random.keys,".Rdata"))
+        save(mix.feat.est, file = paste0("./output/result-",mcem.chosen.demo,"-mcem-feat-",current.time,".Rdata"))
     }
     msg('*** MCEM for general hypergraph is finished. ')
     return(list(beta.hat=beta.hat, feat.hat=feat.hat))
